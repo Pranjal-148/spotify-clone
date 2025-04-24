@@ -1,0 +1,178 @@
+/* Progress bar and stepper */
+.signup-progress {
+    width: 100%;
+    height: 2px;
+    background: #222;
+    margin: 32px 0 24px 0;
+    border-radius: 2px;
+    position: relative;
+  }
+  .signup-progress .bar {
+    width: 33.3%;
+    height: 100%;
+    background: #1ed760;
+    border-radius: 2px;
+    transition: width 0.3s;
+  }
+  .signup-progress[data-step="2"] .bar { width: 66.6%; }
+  .signup-progress[data-step="3"] .bar { width: 100%; }
+  
+  /* Step label and title */
+  .signup-step-label {
+    text-align: left;
+    color: #b3b3b3;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    margin-top: 16px;
+    font-weight: 400;
+  }
+  .signup-step-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  
+  /* Back button */
+  .signup-back-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 16px;
+    margin-left: -8px;
+    transition: color 0.2s;
+  }
+  .signup-back-btn svg {
+    margin-right: 6px;
+  }
+  .signup-back-btn:hover { color: #1ed760; }
+  
+  /* Password criteria */
+  .signup-criteria-list {
+    text-align: left;
+    margin-top: 16px;
+    color: #fff;
+    font-size: 1rem;
+    padding-left: 0;
+  }
+  .signup-criteria-list li {
+    margin-bottom: 8px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .signup-criteria-list .pass {
+    color: #1ed760;
+  }
+  
+  /* DOB fields */
+  .signup-dob-fields {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .signup-dob-fields input,
+  .signup-dob-fields select {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Gender options */
+  .signup-gender-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .signup-gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Error highlight */
+  .form-control.error, .signup-dob-fields input.error, .signup-dob-fields select.error {
+    border-color: #e91429 !important;
+  }
+  
+  /* Terms & Conditions page (Step 4) */
+  .signup-checkbox-container {
+    background-color: #222;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  
+  .signup-checkbox-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .signup-checkbox-option input[type="checkbox"] {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    accent-color: #1ed760;
+  }
+  
+  .signup-checkbox-option span {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .signup-terms-section {
+    text-align: left;
+    margin: 24px 0;
+    color: #fff;
+  }
+  
+  .signup-terms-section p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .terms-link {
+    color: #1ed760;
+    text-decoration: none;
+  }
+  
+  .terms-link:hover {
+    text-decoration: underline;
+  }
+  
+  .recaptcha-footer {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+    margin-top: 48px;
+    text-align: center;
+  }
+  
+  /* Update the progress bar for Step 3 */
+  .signup-progress[data-step="3"] .bar {
+    width: 100%;
+  }
+  
+  /* Make sure the Sign up button has proper spacing */
+  #signup-final-btn {
+    margin-top: 24px;
+  }
+  
+  @media (max-width: 500px) {
+    .signup-step-title { font-size: 1.1rem; }
+    .signup-progress { margin: 16px 0 16px 0; }
+  }
+  

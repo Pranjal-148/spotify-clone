@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Sign Up - Terms & Conditions</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/utility.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-form-container active">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Spotify" width="100vw" class="invert" />
+      </div>
+      <div class="signup-progress" data-step="3">
+        <div class="bar"></div>
+      </div>
+      <button class="signup-back-btn" onclick="window.location.href='signup-step3.html'">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
+      <div class="signup-step-label">Step 3 of 3</div>
+      <div class="signup-step-title">Terms & Conditions</div>
+      <form id="terms-form" autocomplete="off">
+        <div class="signup-checkbox-container">
+          <label class="signup-checkbox-option">
+            <input type="checkbox" id="marketing-opt-out" />
+            <span>I would prefer not to receive marketing messages from Spotify</span>
+          </label>
+        </div>
+        
+        <div class="signup-checkbox-container">
+          <label class="signup-checkbox-option">
+            <input type="checkbox" id="data-sharing" />
+            <span>Share my registration data with Spotify's content providers for marketing purposes.</span>
+          </label>
+        </div>
+        
+        <div class="signup-terms-section">
+          <p>By clicking on sign-up, you agree to Spotify's <a href="#" class="terms-link">Terms and Conditions of Use</a>.</p>
+          
+          <p>To learn more about how Spotify collects, uses, shares and protects your personal data, please see <a href="#" class="terms-link">Spotify's Privacy Policy</a>.</p>
+        </div>
+        
+        <button class="btn btn-primary" id="signup-final-btn" type="submit">Sign up</button>
+      </form>
+      <div class="recaptcha-footer">
+        This site is protected by reCAPTCHA and the Google<br>
+        <a href="#" class="link">Privacy Policy</a> and <a href="#" class="link">Terms of Service</a> apply.
+      </div>
+    </div>
+  </div>
+  <script src="js/pages.js"></script>
+</body>
+</html>

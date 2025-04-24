@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Sign Up - About You</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/utility.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-form-container active">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Spotify" width="100vw" class="invert" />
+      </div>
+      <div class="signup-progress" data-step="2">
+        <div class="bar"></div>
+      </div>
+      <button class="signup-back-btn" onclick="window.location.href='signup-step2.html'">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
+      <div class="signup-step-label">Step 2 of 3</div>
+      <div class="signup-step-title">Tell us about yourself</div>
+      <form id="about-form" autocomplete="off">
+        <div class="form-group">
+          <label for="name" style="font-weight:700;">Name</label>
+          <div style="color:#b3b3b3;font-size:0.93rem;margin-bottom:4px;">This name will appear on your profile</div>
+          <input id="name" class="form-control" placeholder="" autofocus />
+        </div>
+        <div class="form-group">
+          <label for="dob" style="font-weight:700;">Date of birth</label>
+          <div style="color:#b3b3b3;font-size:0.93rem;margin-bottom:4px;">Why do we need your date of birth? <a href="#" class="link">Learn more.</a></div>
+          <div class="signup-dob-fields">
+            <input id="dob-year" class="form-control" placeholder="YYYY" maxlength="4" inputmode="numeric" />
+            <label for="dob-month" class="sr-only">Month</label>
+            <select id="dob-month" class="form-control">
+              <option value="">Month</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <input id="dob-day" class="form-control" placeholder="dd" maxlength="2" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label style="font-weight:700;">Gender</label>
+          <div style="color:#b3b3b3;font-size:0.93rem;margin-bottom:4px;">
+            We use your gender to help personalize our content recommendations and ads for you.
+          </div>
+          <div class="signup-gender-options">
+            <label><input type="radio" name="gender" value="Man" /> Man</label>
+            <label><input type="radio" name="gender" value="Woman" /> Woman</label>
+            <label><input type="radio" name="gender" value="Non-binary" /> Non-binary</label>
+            <label><input type="radio" name="gender" value="Something else" /> Something else</label>
+            <label><input type="radio" name="gender" value="Prefer not to say" /> Prefer not to say</label>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="signup-personal-btn" type="submit" style="margin-top: 32px;">Next</button>
+      </form>
+      <div class="text-muted" style="margin-top:48px; font-size:0.85rem;">
+        This site is protected by reCAPTCHA and the Google<br>
+        <a href="#" class="link">Privacy Policy</a> and <a href="#" class="link">Terms of Service</a> apply.
+      </div>
+    </div>
+  </div>
+  <script src="js/pages.js"></script>
+</body>
+</html>

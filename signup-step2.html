@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Create Password</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/utility.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-form-container active">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Spotify" width="100vw" class="invert" />
+      </div>
+      <div class="signup-progress" data-step="1">
+        <div class="bar"></div>
+      </div>
+      <button class="signup-back-btn" onclick="window.location.href='auth.html'">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
+      <div class="signup-step-label">Step 1 of 3</div>
+      <div class="signup-step-title">Create a password</div>
+      <form id="password-form" autocomplete="off">
+        <div class="form-group">
+          <label for="password" style="font-weight:700;">Password</label>
+          <div class="password-container">
+            <input type="password" id="password" class="form-control" placeholder="" autofocus />
+            <button class="password-toggle" type="button" tabindex="-1" aria-label="Show or hide password">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <line x1="3" y1="3" x2="21" y2="21"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div style="text-align:left; font-weight:700; margin-top:18px;">Your password must contain at least</div>
+        <ul class="signup-criteria-list" id="password-criteria">
+          <li id="criteria-letter"><span>○</span> 1 letter</li>
+          <li id="criteria-number"><span>○</span> 1 number or special character (example: # ? ! &)</li>
+          <li id="criteria-length"><span>○</span> 10 characters</li>
+        </ul>
+        <button class="btn btn-primary" id="signup-password-btn" type="submit" style="margin-top: 32px;">Next</button>
+      </form>
+      <div class="text-muted" style="margin-top:48px; font-size:0.85rem;">
+        This site is protected by reCAPTCHA and the Google<br>
+        <a href="#" class="link">Privacy Policy</a> and <a href="#" class="link">Terms of Service</a> apply.
+      </div>
+    </div>
+  </div>
+  <script src="js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/utility.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <title>Spotify Clone - Authentication</title>
+  <style>
+    .auth-form-container {
+      background-color: #181818;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+    .form-control:focus {
+      border-color: #1ed760;
+      box-shadow: 0 0 5px #1ed760;
+    }
+    .btn-social:hover {
+      background-color: #292929;
+      transform: scale(1.02);
+    }
+    .btn {
+      transition: all 0.2s ease;
+    }
+    @media (max-width: 500px) {
+      .auth-form-container {
+        padding: 20px 15px;
+      }
+    }
+    .invert {
+      filter: invert(1);
+    }
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      border-top-color: #000;
+      animation: spin 1s linear infinite;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .error {
+      border-color: #e91429 !important;
+    }
+    .error-message {
+      color: #e91429;
+      font-size: 0.8rem;
+      margin-top: 5px;
+      text-align: left;
+      display: none;
+    }
+    .error-message.visible {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="auth-container">
+    <!-- Sign Up -->
+    <div id="signup-container" class="auth-form-container active">
+      <div class="logo">
+        <img width="100vw" class="invert" src="img/logo.svg" alt="Spotify" />
+      </div>
+      <h1>Sign up to start listening</h1>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" class="form-control" placeholder="name@domain.com" />
+        <div class="error-message" id="email-error">Please enter a valid email address</div>
+      </div>
+      <a class="link" id="phone-link">Use phone number instead.</a>
+      <button class="btn btn-primary" id="signup-btn">Next</button>
+      <div class="divider"><span>or</span></div>
+      <button class="btn btn-social">
+        <img width="24" class="social-icon" src="img/google.svg" alt="Google logo" />
+        Sign up with Google
+      </button>
+      <button class="btn btn-social">
+        <img width="24" class="social-icon" src="img/facebook.svg" alt="Facebook logo" />
+        Sign up with Facebook
+      </button>
+      <button class="btn btn-social">
+        <img width="24" class="social-icon" src="img/apple.svg" alt="Apple logo" />
+        Sign up with Apple
+      </button>
+      <div class="text-muted">
+        Already have an account?
+        <a class="link" id="show-login">Log in here</a>.
+      </div>
+    </div>
+
+    <!-- Login -->
+    <div id="login-container" class="auth-form-container">
+      <div class="logo">
+        <img width="100vw" class="invert" src="img/logo.svg" alt="Spotify" />
+      </div>
+      <h1>Log in to Spotify</h1>
+      <button class="btn btn-social">
+        <img width="24" class="social-icon" src="img/google.svg" alt="Google logo">
+        Continue with Google
+      </button>
+      <button class="btn btn-social">
+        <img width="24" class="social-icon" src="img/facebook.svg" alt="Facebook logo" />
+        Continue with Facebook
+      </button>
+      <button class="btn btn-social">
+        <img width="24" class="social-icon" src="img/apple.svg" alt="Apple logo" />
+        Continue with Apple
+      </button>
+      <button class="btn btn-social">Continue with phone number</button>
+      <div class="divider"><span>or</span></div>
+      <div class="form-group">
+        <label for="login-email">Email or username</label>
+        <input type="text" id="login-email" class="form-control" placeholder="Email or username" />
+        <div class="error-message" id="login-email-error">Please enter your email or username</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" class="form-control" placeholder="Password" />
+          <button class="password-toggle" type="button" title="Show or hide password">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+              <line x1="3" y1="3" x2="21" y2="21"></line>
+            </svg>
+          </button>          
+        </div>
+        <div class="error-message" id="password-error">Please enter your password</div>
+      </div>
+      <button class="btn btn-primary" id="login-btn">Log In</button>
+      <div class="text-muted centered-text">
+        <a class="link" href="#">Forgot your password?</a>
+      </div>
+      <div class="divider"></div>
+      <div class="text-muted">
+        Don't have an account?
+        <a class="link" id="show-signup">Sign up for Spotify</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

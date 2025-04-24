@@ -1,0 +1,23 @@
+{
+  "name": "spotify.cl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pranjal-148/spotify-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pranjal-148/spotify-clone/issues"
+  },
+  "homepage": "https://github.com/Pranjal-148/spotify-clone#readme",
+  "description": "",
+  "dependencies": {
+    "mongodb": "^6.16.0"
+  }
+}
