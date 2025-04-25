@@ -1,9 +1,8 @@
-// search.js
 
 let debounceTimeout;
 let spotifyAudio = null;
 let isServerRunning = false;
-const MAX_RESULTS = 7; // Show max 7 results at a time
+const MAX_RESULTS = 7; 
 
 // Clear search function
 function clearSearch() {
@@ -124,7 +123,6 @@ function renderSpotifySongs(tracks) {
       </li>`;
   });
 
-  // Show how many results were returned vs. how many displayed
   if (tracks.length > MAX_RESULTS) {
     spotifySongsUL.innerHTML += `<li class="more-results">Showing ${MAX_RESULTS} of ${tracks.length} results. Refine your search for more specific results.</li>`;
   }
