@@ -161,12 +161,10 @@
     text-align: center;
   }
   
-  /* Update the progress bar for Step 3 */
   .signup-progress[data-step="3"] .bar {
     width: 100%;
   }
   
-  /* Make sure the Sign up button has proper spacing */
   #signup-final-btn {
     margin-top: 24px;
   }
