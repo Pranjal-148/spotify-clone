@@ -214,7 +214,6 @@ async function main() {
         }
     })
 }
-// Add this code to your script.js file to connect login/signup buttons
     document.addEventListener('DOMContentLoaded', function () {
     // Connect login and signup buttons to the auth page
     const loginButton = document.querySelector('.loginbtn');
