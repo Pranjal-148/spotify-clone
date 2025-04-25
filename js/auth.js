@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
       signup.classList.remove("active");
       login.classList.add("active");
     } else {
-      // Default to signup if #signup or no hash
       login.classList.remove("active");
       signup.classList.add("active");
     }
